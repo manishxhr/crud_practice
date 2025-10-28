@@ -15,8 +15,8 @@ $student = new Student($db);
 if(isset($_GET['id'])){
     $id=$_GET['id'];
     if($student->delete($id)){
-        $message="student. delyed. successfully";
-        header("Location: index.php?message=" . urlencode("Student deleted successfully"));
+        $message="student. deleted. successfully";
+        header("Location: index.php?message=" . urlencode($message));
         exit;
     }
     }

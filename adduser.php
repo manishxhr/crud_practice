@@ -15,7 +15,7 @@ $student = new Student($db);
 $message = '';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 // if(isset($_POST['submit'])){
-    $name = htmlspecialchars(strip_tags($_POST['name']));
+    $name = htmlspecialchars(strip_tags(trim($_POST['name'])));
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     $password = $_POST['password'];
 
